@@ -1,0 +1,9 @@
+name: Raid
+main: io.github.pure1.raid.Raid
+commands:
+  Raid:
+    description: Shows Raid.
+version: 0.0.1
+
+
+
