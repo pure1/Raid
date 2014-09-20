@@ -3,6 +3,67 @@ main: io.github.pure1.raid.Raid
 commands:
   Raid:
     description: Shows Raid.
+  RParty:
+    description: quicker access to the Party commands
+
+permissions:
+  raid.*:
+    decription: gives access to all raid commands
+    children:
+      party.*: true
+ 
+ * -raid
+		 * 
+		 * --party
+		 * ---make <x> {y}
+		 * ---disband {y}
+		 * ---members <x>
+		 * ---invite <x>
+		 * ===promote <x> {y}
+		 * ---kick <x>
+  party.*:
+    description: gives access to all party commands
+    children:
+      party.make: true
+      party.disband: true
+      party.disband.other: true
+      party.members: true
+      party.invite: true
+      party.kick: true
+      party.kick.other: true
+      party.join: true
+      party.leave: true
+      party.chat: true
+  party.make:
+    description: allows a player to make a party
+    default: true
+  party.disband:
+    description: allows a leader to disband their party
+    default: true
+  party.disband.other:
+    description: allows player to disband another party
+    default: op
+  party.members:
+    description: allows a player to list members in a party
+    default: true
+  party.invite:
+    description: allows a player to invite another to the party they are in
+    default: true
+  party.kick:
+    description: allows a leader to kick a player from their party
+    default: true
+  party.kick.other:
+    description: allows a player to kick a player from any party
+    default: op
+  party.join:
+    description: allows a player to accept an invitation
+    default: true
+  party.leave:
+    description: allows a player to leave a party
+    default: true
+  party.chat:
+    description: allows player to toggle into party chat
+    default: true
 version: 0.0.1
 
 
