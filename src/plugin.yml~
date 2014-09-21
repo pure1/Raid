@@ -11,8 +11,16 @@ permissions:
     decription: gives access to all raid commands
     children:
       party.*: true
-
-
+ 
+ * -raid
+		 * 
+		 * --party
+		 * ---make <x> {y}
+		 * ---disband {y}
+		 * ---members <x>
+		 * ---invite <x>
+		 * ===promote <x> {y}
+		 * ---kick <x>
   party.*:
     description: gives access to all party commands
     children:
